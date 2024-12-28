@@ -1,13 +1,13 @@
-import './css/background.css';
-import image2 from './assets/image2.jpg'
+import '../styles/Background.css'
+import image1 from '../assets/image1.jpg'
 
-fonction Background() {
+function Background() {
     return (
         <div className="background">
-            <div className="background-image"></div>
-            <img src={image2} alt='image 2' className='image2' />
+            <img src={image1} alt='image 1' className='image1' />
 				<h1 className='tagline'>Chez vous, partout et ailleurs</h1>
         </div>
     )     
 
 }
+export default Background;
