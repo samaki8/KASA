@@ -4,11 +4,12 @@ body {
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
+     display: flex;
+width: 1240px;
+height: 68px;
+justify-content: center;
+align-items: center;
+gap: 720.678px;
 }
 
 .logo img {
