@@ -1,0 +1,52 @@
+// Variables
+$primary-color: #FF6060
+$text-color: #333
+$font-family: Arial, sans-serif
+$header-width: 1240px
+$header-height: 68px
+$logo-width: 210.32px
+$logo-height: 68px
+$gap-large: 720.678px
+$gap-small: 20px
+
+// Styles globaux
+body
+  margin: 0
+  font-family: $font-family
+
+// Styles de l'en-tête
+.header
+  display: flex
+  width: $header-width
+  height: $header-height
+  justify-content: center
+  align-items: center
+  gap: $gap-large
+
+// Styles du logo
+.logo
+  img
+    width: $logo-width
+    height: $logo-height
+    gap: 0px
+    opacity: 0px
+
+// Styles de la navigation
+.nav
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    gap: $gap-small
+
+    li
+      margin: 0
+
+      a
+        text-decoration: none
+        color: $text-color
+        font-weight: bold
+
+        &:hover
+          color: $primary-color

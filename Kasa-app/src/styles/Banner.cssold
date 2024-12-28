@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+     display: flex;
+width: 1240px;
+height: 68px;
+justify-content: center;
+align-items: center;
+gap: 720.678px;
+}
+
+.logo img {
+    width: 210.32px;
+    height: 68px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li {
+    margin: 0;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav ul li a:hover {
+    color: #007BFF;
+}
+

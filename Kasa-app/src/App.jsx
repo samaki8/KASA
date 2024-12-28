@@ -3,14 +3,13 @@
 //import viteLogo from '/vite.svg'
 import './styles/App.css'
 import Banner from './compoments/Banner.jsx'
-//import logo from './assets/logo.svg'
-// import Cart from './Cart'
-//import ShoppingList from './ShoppingList'
+import Background from './compoments/Background.jsx'
 
 function App() {
 	return (
 		<div>
-			<Banner/>
+      <Banner />
+      <Background />
 			
 			
 		</div>
