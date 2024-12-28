@@ -1,9 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+//import { useState } from 'react'
+//import reactLogo from './assets/react.svg'
+//import viteLogo from '/vite.svg'
+import './styles/App.css'
+import Banner from './compoments/Banner.jsx'
+import logo from './assets/logo.svg'
+// import Cart from './Cart'
+//import ShoppingList from './ShoppingList'
 
 function App() {
+	return (
+		<div>
+			<Banner/>
+			
+			
+		</div>
+	)
+}
+
+
+/*function App() {
   const [count, setCount] = useState(0)
 
   return (
@@ -31,6 +46,6 @@ function App() {
     </>
   )
 }
-
+*/
 
 export default App
