@@ -1,15 +1,17 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Montserrat;
 }
 
 .header {
-  display: flex;
   width: 1240px;
   height: 68px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 720.678px;
+  display: inline-flex;
+  padding-top: 45px;
+  padding-bottom: 50px;
 }
 
 .logo img {
@@ -20,20 +22,22 @@ body {
 }
 
 .nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 57px;
+  list-style: none;
 }
 .nav ul li {
   margin: 0;
 }
 .nav ul li a {
+  font-size: 24px;
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  color: #000000;
+  font-weight: 500;
+  font-size: normal;
+  line-height: 142.6%;
 }
 .nav ul li a:hover {
-  color: #FF6060;
+  text-decoration-line: underline;
 }/*# sourceMappingURL=Banner.css.map */

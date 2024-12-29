@@ -1,7 +1,7 @@
 // Variables
 $primary-color: #FF6060
-$text-color: #333
-$font-family: Arial, sans-serif
+$text-color: #000000
+$font-family: Montserrat
 $header-width: 1240px
 $header-height: 68px
 $logo-width: 210.32px
@@ -16,12 +16,19 @@ body
 
 // Styles de l'en-tête
 .header
-  display: flex
+  
   width: $header-width
   height: $header-height
-  justify-content: center
+  justify-content: space-between
   align-items: center
   gap: $gap-large
+  display: inline-flex
+  padding-top: 45px
+  padding-bottom: 50px
+  //flex-direction: column
+
+  //gap: 50px
+
 
 // Styles du logo
 .logo
@@ -34,19 +41,21 @@ body
 // Styles de la navigation
 .nav
   ul
-    list-style: none
-    margin: 0
-    padding: 0
     display: flex
-    gap: $gap-small
+    align-items: flex-start
+    gap: 57px
+    list-style: none
 
     li
       margin: 0
 
       a
+        font-size: 24px
         text-decoration: none
         color: $text-color
-        font-weight: bold
+        font-weight: 500
+        font-size: normal
+        line-height: 142.6%
 
         &:hover
-          color: $primary-color
+          text-decoration-line: underline
