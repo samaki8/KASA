@@ -19,8 +19,8 @@ function Banner() {
             </div>
             <nav className="nav">
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">ACCUEIL</a></li>
+                    <li><a href="#">A PROPOS</a></li>
                 </ul>
             </nav>
         </header>
