@@ -45,7 +45,6 @@ body {
 @media only screen and (min-width: 481px) {
   .header {
     height: 68px;
-    gap: 720.678px;
     padding-top: 45px;
     padding-bottom: 50px;
   }
