@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import { useState, useEffect } from 'react';
 import logements from '../data/logements.json';
 import '../styles/AnnoncesGrid.css';

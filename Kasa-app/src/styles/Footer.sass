@@ -1,13 +1,4 @@
 //Kasa-app\src\styles\Footer.sass
-// Variables
-$primary-color: #000
-$text-color: #FFF
-$font-family: Montserrat
-$breakpoint-tablet: 768px
-
-// Mixins
-@mixin tablet
-@media screen and (min-width: $breakpoint-tablet)
 
 // Reset des marges du body  
 //body
@@ -15,14 +6,14 @@ $breakpoint-tablet: 768px
     //padding: 0
     //min-height: 100vh
     //position: relative
+// Variables
+$primary-color: #000
+$text-color: #FFF
+$font-family: Montserrat
 
-// Styles du footer
 .footer
     position: relative
-    left: 0
-    right: 0
-    bottom: 0
-    //width: 100vw
+    width: 100vw
     background-color: $primary-color
     display: flex
     flex-direction: column
@@ -31,9 +22,19 @@ $breakpoint-tablet: 768px
     padding: 20px 0
     margin: 0
     box-sizing: border-box
-    padding: 66px 464px 29px 463px
-    max-width: 1440px
     margin-top: 50px
+    left: 50%
+    right: 50%
+    margin-left: -50vw
+    margin-right: -50vw
+
+    .content
+        width: 100%
+        max-width: 1440px
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        align-items: center
 
 .logo2
     img
@@ -46,6 +47,4 @@ $breakpoint-tablet: 768px
     font-size: 12px
     font-weight: 500
     margin-top: 20px
-
-    @include tablet
-    font-size: 24px
+    text-align: center
