@@ -1,14 +1,13 @@
 .annonces-container {
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 1240px;
+  padding: 50px 56px 50px 43px;
+  max-width: 1440px;
   border-radius: 25px;
   background: #F6F6F6;
 }
 
 .annonces-grid {
   display: grid;
-  gap: 60px;
+  gap: 60px 50px;
 }
 .annonces-grid.desktop {
   grid-template-columns: repeat(3, 1fr);
