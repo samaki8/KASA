@@ -9,11 +9,12 @@ function Banner() {
       <Link to="/">
         <img src={logo} alt="Kasa" className="logo" />
       </Link>
-      <nav>
+      <nav className="nav">
         <Link to="/">ACCUEIL</Link>
         <Link to="/about">A PROPOS</Link>
       </nav>
     </header>
   );
 }
-export default Banner
+
+export default Banner;

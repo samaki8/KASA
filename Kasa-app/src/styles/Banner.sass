@@ -4,11 +4,6 @@ $text-color: #000000
 $font-family: Montserrat
 $gap-small: 20px
 
-// Styles globaux
-body
-  margin: 0
-  font-family: $font-family
-
 // Styles de l'en-tête
 .header
   display: flex
@@ -21,27 +16,19 @@ body
 
 // Styles du logo
 .logo
-  img
-    width: 145px
-    height: 46px
+  width: 145px
+  height: 46px
 
 // Styles de la navigation
 .nav
-  ul
-    display: flex
-    list-style: none
-    padding: 0
-    margin: 0
-
-  li
-    margin-left: 10px
+  display: flex
+  gap: 10px
 
   a
     color: $text-color
     text-align: right
     font-family: $font-family
     font-size: 12px
-    font-style: normal
     font-weight: 500
     line-height: 142.6%
     text-decoration: none
@@ -50,27 +37,21 @@ body
     &:hover
       text-decoration-line: underline
 
-// Media queries pour les écrans plus larges
+// Media queries
 @media only screen and (min-width: 481px)
   .header
     height: 68px
-    //gap: 720.678px
     padding-top: 45px
     padding-bottom: 50px
     max-width: 1440px
 
   .logo
-    img
-      width: 210.32px
-      height: 68px
+    width: 210.32px
+    height: 68px
 
   .nav
-    ul
-      gap: 57px
-
-    li
-      margin-left: 20px
-
     a
       font-size: 24px
       line-height: 142.6%
+      margin-left: 20px
+      gap: 57px
