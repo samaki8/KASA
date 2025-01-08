@@ -1,31 +1,19 @@
-/*import '../styles/Banner.css'
-
-
-function Banner({ children }) {
-	return <div className='lmj-banner'>{children}</div>
-}
-
-export default Banner
-*/
-//import React from 'react';
+//Kasa-app\src\compoments\Banner.jsx
 import '../styles/Banner.css';
-import '../assets/logo.png';
+import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 function Banner() {
-    return (
-        <header className="header">
-            <div className="logo">
-                <img src="./src/assets/logo.png" alt="Logo" />
-            </div>
-            <nav className="nav">
-                <ul>
-                    <li><a href="#">ACCUEIL</a></li>
-                    <li><a href="#">A PROPOS</a></li>
-                </ul>
-            </nav>
-        </header>
-    );
+  return (
+    <header className="header">
+      <Link to="/">
+        <img src={logo} alt="Kasa" className="logo" />
+      </Link>
+      <nav>
+        <Link to="/">ACCUEIL</Link>
+        <Link to="/about">A PROPOS</Link>
+      </nav>
+    </header>
+  );
 }
-
-export default Banner;
-
+export default Banner
