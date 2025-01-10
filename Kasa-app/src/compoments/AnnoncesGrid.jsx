@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import logements from '../data/logements.json';
 import '../styles/AnnoncesGrid.css';
+import { Link } from 'react-router-dom';
 
 function AnnoncesGrid() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -19,14 +20,14 @@ function AnnoncesGrid() {
     <div className="annonces-container">
       <div className={`annonces-grid ${windowWidth <= 768 ? 'mobile' : 'desktop'}`}>
         {logements.map((logement) => (
-          <div key={logement.id} className="annonce-card">
-            <img 
-              src={logement.cover} 
-              alt={logement.title}
-              className="annonce-image"
-            />
+          <Link 
+            key={logement.id} 
+            to={`/logement/${logement.id}`} 
+            className="annonce-card"
+          >
+            <img src={logement.cover} className="annonce-image" alt={logement.title} />
             <h3 className="annonce-title">{logement.title}</h3>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

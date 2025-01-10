@@ -1,11 +1,56 @@
+//Kasa-app\src\styles\Error404.sass
 .error-page
+    flex-direction: column
+    align-items: center
+    gap: 113px
+    justify-content: center
+
     h1
-        display: flex
-       // width: 597px
-       // height: 263px
-        flex-direction: column
-        justify-content: center
-        flex-shrink: 0
+        color: #FF6060
+        text-align: center
+        font-family: Montserrat
+        font-size: 96px
+        font-style: normal
+        font-weight: 700
+        line-height: 142.6% /* 136.896px */
+
+    p
+        color: #FF6060
+        text-align: center
+        font-family: Montserrat
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        line-height: 142.6% /* 25.668px */
+
+    .error-link
+        color: #000
+        font-family: Montserrat
+        font-size: 14px
+        font-style: normal
+        font-weight: 500
+        line-height: 142.6% /* 19.964px */
+        text-decoration-line: underline
+        text-decoration-style: solid
+        text-decoration-skip-ink: none
+        text-decoration-thickness: auto
+        text-underline-offset: auto
+        text-underline-position: from-font
+
+        &:hover
+            opacity: 0.8
+
+@media only screen and (min-width: 481px)
+.error-page
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    gap: 139px
+    min-height: calc(100vh - 300px)
+
+    h1
         color: #FF6060
         text-align: center
         font-family: Montserrat
@@ -14,10 +59,10 @@
         font-weight: 700
         line-height: 142.6% /* 410.688px */
 
-    p
-        color: #FF6060
+    .error-link
         font-family: Montserrat
-        font-size: 36px
-        font-style: normal
+        font-size: 18px
         font-weight: 500
-        line-height: 142.6% /* 51.336px */
+        text-decoration: underline
+        margin-top: 139px
+        margin-bottom: 139px
