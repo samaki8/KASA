@@ -45,7 +45,6 @@
 
 @media only screen and (min-width: 481px) {
   .background {
-    max-width: 1440px;
     height: 223px;
     border-radius: 25px;
     padding-bottom: 43px;

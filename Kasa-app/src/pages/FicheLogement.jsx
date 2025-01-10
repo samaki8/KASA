@@ -3,19 +3,29 @@ import logements from '../data/logements.json';
 import { useParams, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
+
 function FicheLogement() {
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const selectedLogement = logements.find(item => item.id === id);
-    setLogement(selectedLogement);
+    if (selectedLogement) {
+      setLogement(selectedLogement);
+    }
+    setIsLoading(false);
   }, [id]);
+
+  if (isLoading) {
+    return <div>Chargement...</div>;
+  }
 
   if (!logement) {
     return <Navigate to="/error404" />;
   }
+
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => 
