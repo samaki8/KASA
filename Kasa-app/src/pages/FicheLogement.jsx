@@ -4,6 +4,7 @@ import logements from '../data/logements.json';
 import { useParams, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { ArrowIcon } from '../compoments/ArrowIcon.jsx';
+import { ArrowIcon2 } from '../compoments/ArrowIcon2.jsx';
 
 
 function FicheLogement() {
@@ -94,11 +95,7 @@ function FicheLogement() {
               onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}
             >
               <span>Description</span>
-              <img
-                src="/arrow.png"
-                alt="toggle"
-                className={isDescriptionOpen ? 'rotate' : ''}
-              />
+              <ArrowIcon2 className={`ArrowIcon2 ${isDescriptionOpen ? 'rotate' : ''}`} />
             </button>
             <div className={`content ${isDescriptionOpen ? 'active' : ''}`}>
               <p>{logement.description}</p>
@@ -111,11 +108,9 @@ function FicheLogement() {
               onClick={() => setIsEquipementsOpen(!isEquipementsOpen)}
             >
               <span>Équipements</span>
-              <img
-                src="/arrow.png"
-                alt="toggle"
-                className={isEquipementsOpen ? 'rotate' : ''}
-              />
+
+              <ArrowIcon2 className={`ArrowIcon2 ${isEquipementsOpen ? 'rotate' : ''}`} />
+
             </button>
             <div className={`content ${isEquipementsOpen ? 'active' : ''}`}>
               <ul>

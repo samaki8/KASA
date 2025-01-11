@@ -57,16 +57,25 @@
         flex-direction: column
         gap: 20px
         margin-bottom: 20px
+        text-align: start
 
         .title-location
             h1
-                font-size: 18px
                 color: #FF6060
-                margin-bottom: 5px
+                font-family: Montserrat
+                font-size: 18px
+                font-style: normal
+                font-weight: 500
+                line-height: 142.6% /* 25.668px */
 
             p
-                color: #FF6060
-                margin-bottom: 10px
+                color: #000
+
+                font-family: Montserrat
+                font-size: 14px
+                font-style: normal
+                font-weight: 500
+                line-height: 142.6% /* 19.964px */
 
             .tags
                 display: flex
@@ -78,7 +87,13 @@
                     color: white
                     padding: 3px 15px
                     border-radius: 10px
+                    color: #FFF
+                    text-align: center
+                    font-family: Montserrat
                     font-size: 10px
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 142.6% /* 14.26px */
 
         .host-rating
             display: flex
@@ -134,20 +149,20 @@
             justify-content: space-between
             align-items: center
 
-            &::after
-                content: "˅"
-                transition: transform 0.3s ease
+        .ArrowIcon2
 
-            &.active::after
-                transform: rotate(180deg)
+            transition: transform 0.3s ease
 
+            &.active .arrow-icon2
+                transform: rotate(-90deg)
         .content
             background-color: #F6F6F6
-            padding: 20px
-            color: #FF6060
+            //padding: 20px
+            color: #000000
             max-height: 0
             overflow: hidden
             transition: max-height 0.3s ease
+            font-size: 13px
 
             &.active
                 max-height: 500px
