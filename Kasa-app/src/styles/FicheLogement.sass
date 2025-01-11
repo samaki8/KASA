@@ -1,1 +1,219 @@
 //Kasa-app\src\styles\FicheLogement.sass
+.fiche-logement
+    margin: 27px 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+.carousel
+    position: relative
+    width: 335px
+    height: 255px
+    flex-shrink: 0
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 10px
+
+    .carousel-btn
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        width: 24px
+        height: 24px
+        background: none
+        border: none
+        cursor: pointer
+        z-index: 2
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &.prev
+            left: 10px
+            transform: translateY(-50%)
+
+        &.next
+            right: 10px
+            transform: translateY(-50%) rotate(90deg)
+
+    .image-counter
+        position: absolute
+        bottom: 25px
+        left: 50%
+        transform: translateX(-50%)
+        color: white
+        font-size: 18px
+
+.logement-info
+    width: 100%
+    max-width: 1240px
+    margin-top: 20px
+    padding: 0 20px
+
+    .logement-header
+        display: flex
+        flex-direction: column
+        gap: 20px
+        margin-bottom: 20px
+
+        .title-location
+            h1
+                font-size: 18px
+                color: #FF6060
+                margin-bottom: 5px
+
+            p
+                color: #FF6060
+                margin-bottom: 10px
+
+            .tags
+                display: flex
+                gap: 10px
+                flex-wrap: wrap
+
+                .tag
+                    background: #FF6060
+                    color: white
+                    padding: 3px 15px
+                    border-radius: 10px
+                    font-size: 10px
+
+        .host-rating
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+            .host
+                display: flex
+                align-items: center
+                gap: 10px
+
+                span
+                    color: #FF6060
+                    text-align: right
+                    width: 60px
+                    font-size: 12px
+
+                img
+                    width: 32px
+                    height: 32px
+                    border-radius: 50%
+
+            .rating
+                .star
+                    color: #E3E3E3
+                    font-size: 13px
+
+                    &.filled
+                        color: #FF6060
+
+    .details
+        display: flex
+        flex-direction: column
+        gap: 20px
+        width: 100%
+        margin-top: 24px
+
+    .description, .equipments
+        background-color: #FF6060
+        border-radius: 10px
+        overflow: hidden
+
+        button.collapsible
+            width: 100%
+            padding: 10px 20px
+            background-color: #FF6060
+            color: white
+            border: none
+            text-align: left
+            font-size: 13px
+            cursor: pointer
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+            &::after
+                content: "˅"
+                transition: transform 0.3s ease
+
+            &.active::after
+                transform: rotate(180deg)
+
+        .content
+            background-color: #F6F6F6
+            padding: 20px
+            color: #FF6060
+            max-height: 0
+            overflow: hidden
+            transition: max-height 0.3s ease
+
+            &.active
+                max-height: 500px
+
+            p, ul
+                margin: 0
+                padding: 0
+                list-style: none
+
+@media only screen and (min-width: 481px)
+    .fiche-logement
+        margin: 50px 0
+
+    .carousel
+        width: 1240px
+        height: 415px
+
+        img
+            border-radius: 25px
+
+        .carousel-btn
+            width: 48px
+            height: 48px
+
+        .image-counter
+            font-size: 18px
+
+    .logement-info
+        .logement-header
+            flex-direction: row
+            justify-content: space-between
+            align-items: flex-start
+
+            .title-location
+                h1
+                    font-size: 36px
+
+                p
+                    font-size: 18px
+
+                .tag
+                    font-size: 14px
+
+            .host-rating
+                flex-direction: column-reverse
+                gap: 20px
+
+                .host
+                    span
+                        font-size: 18px
+
+                    img
+                        width: 64px
+                        height: 64px
+
+                .rating
+                    .star
+                        font-size: 24px
+
+        .details
+            flex-direction: row
+            gap: 76px
+
+            .description, .equipments
+                flex: 1
+
+            button.collapsible
+                font-size: 18px
+                padding: 15px 20px

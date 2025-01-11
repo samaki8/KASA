@@ -1,3 +1,4 @@
+//Kasa-app/src/compoments/AnnoncesGrid.jsx
 //import React from 'react';
 import { useState, useEffect } from 'react';
 import logements from '../data/logements.json';
@@ -33,5 +34,6 @@ function AnnoncesGrid() {
     </div>
   );
 }
+
 
 export default AnnoncesGrid;
