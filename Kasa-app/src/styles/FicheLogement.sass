@@ -108,7 +108,7 @@
                 span
                     color: #FF6060
                     text-align: right
-                    width: 60px
+                    width: 93px
                     font-size: 12px
 
                 img
@@ -148,16 +148,20 @@
             display: flex
             justify-content: space-between
             align-items: center
-
         .ArrowIcon2
-
+            transform-origin: center
+            transform-box: fill-box
             transition: transform 0.3s ease
 
-            &.active .arrow-icon2
-                transform: rotate(-90deg)
+            &.rotate
+                transform: rotate(180deg)
+        .arrow-rotate
+            transform: rotate(180deg)
+            transform-origin: center
+
         .content
             background-color: #F6F6F6
-            //padding: 20px
+
             color: #000000
             max-height: 0
             overflow: hidden
@@ -166,6 +170,7 @@
 
             &.active
                 max-height: 500px
+                padding: 20px 0
 
             p, ul
                 margin: 0

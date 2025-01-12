@@ -95,6 +95,7 @@ function FicheLogement() {
               onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}
             >
               <span>Description</span>
+
               <ArrowIcon2 className={`ArrowIcon2 ${isDescriptionOpen ? 'rotate' : ''}`} />
             </button>
             <div className={`content ${isDescriptionOpen ? 'active' : ''}`}>

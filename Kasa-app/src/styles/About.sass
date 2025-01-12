@@ -1,0 +1,83 @@
+.about
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    padding: 20px
+
+    .banner
+        width: 100%
+        height: 223px
+        margin-bottom: 30px
+        border-radius: 25px
+        overflow: hidden
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    .values-container
+        width: 100%
+        max-width: 1023px
+        display: flex
+        flex-direction: column
+        gap: 30px
+
+        .value-item
+            width: 100%
+
+            .collapsible
+                width: 100%
+                padding: 10px 20px
+                background-color: #FF6060
+                color: white
+                border: none
+                border-radius: 5px
+                text-align: left
+                font-size: 13px
+                cursor: pointer
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+                .ArrowIcon2
+                    transition: transform 0.3s ease
+                    transform-origin: center
+
+                    &.rotate
+                        transform: rotate(180deg)
+
+            .content
+                background-color: #F6F6F6
+                color: #FF6060
+                max-height: 0
+                overflow: hidden
+                transition: max-height 0.3s ease
+                border-radius: 0 0 5px 5px
+
+                &.active
+                    max-height: 500px
+                    padding: 20px
+
+                p
+                    margin: 0
+                    font-size: 12px
+                    line-height: 142.6%
+
+@media only screen and (min-width: 768px)
+    .about
+        padding: 40px
+
+        .banner
+            height: 300px
+
+        .values-container
+            .value-item
+                .collapsible
+                    font-size: 18px
+                    padding: 15px 20px
+
+                .content
+                    p
+                        font-size: 16px
