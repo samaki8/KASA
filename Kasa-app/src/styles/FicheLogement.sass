@@ -99,6 +99,7 @@
             display: flex
             justify-content: space-between
             align-items: center
+            flex-direction: row-reverse
 
             .host
                 display: flex
@@ -200,6 +201,7 @@
             flex-direction: row
             justify-content: space-between
             align-items: flex-start
+            gap: 30px
 
             .title-location
                 h1
@@ -212,10 +214,22 @@
                     font-size: 14px
 
             .host-rating
+                //flex-direction: column-reverse
+                //gap: 20px
+                //stify-content: space-between
+                //dth: 100%
+                display: flex
                 flex-direction: column-reverse
+                align-items: flex-end
                 gap: 20px
+                min-width: fit-content-webkit-fill-available
+                margin-top: 40px
 
                 .host
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    order: 2
                     span
                         font-size: 18px
 
@@ -224,6 +238,9 @@
                         height: 64px
 
                 .rating
+                    order: 1
+                    display: flex
+                    gap: 5px
                     .star
                         font-size: 24px
 

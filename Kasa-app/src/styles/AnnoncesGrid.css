@@ -1,7 +1,9 @@
 .annonces-container {
-  padding: 50px 56px 50px 43px;
+  padding: 20px;
   border-radius: 25px;
   background: #F6F6F6;
+  display: flex;
+  justify-content: center;
 }
 
 .annonces-grid {
@@ -9,11 +11,15 @@
   gap: 22px;
   grid-template-columns: 1fr;
 }
+
 .annonces-grid.desktop {
   grid-template-columns: repeat(3, 1fr);
 }
+
 .annonces-grid.mobile {
   grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 0 auto;
 }
 
 .annonce-card {
@@ -26,8 +32,7 @@
 .annonce-image {
   width: 335px;
   height: 255px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   flex-shrink: 0;
   border-radius: 10px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.2) 99.99%, rgba(0, 0, 0, 0.5) 100%);
@@ -46,6 +51,9 @@
 }
 
 @media only screen and (min-width: 481px) {
+  .annonces-container {
+    padding: 56px 50PX;
+  }
   .annonces-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 60px 50px;
@@ -58,4 +66,4 @@
     width: 340px;
     height: 340px;
   }
-}/*# sourceMappingURL=AnnoncesGrid.css.map */
+}

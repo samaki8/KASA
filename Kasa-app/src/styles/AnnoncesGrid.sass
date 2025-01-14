@@ -1,12 +1,14 @@
 
 .annonces-container
-    padding: 50px 56px 50px 43px
+    padding: 20px
     //max-width: 1440px
     //margin: 0 auto
     //max-width: 1440px
     //height: 829px
     border-radius: 25px
     background: #F6F6F6
+    display: flex
+    justify-content: center
 
 .annonces-grid
     display: grid
@@ -17,6 +19,8 @@
 
     &.mobile
         grid-template-columns: 1fr
+        justify-items: center
+        margin: 0 auto
 
 .annonce-card
     position: relative
@@ -46,6 +50,9 @@
 
 // Media queries pour les écrans plus larges
 @media only screen and (min-width: 481px)
+    .annonces-container
+        padding: 56px 50PX
+
     .annonces-grid
         grid-template-columns: repeat(3, 1fr)
         gap: 60px 50px

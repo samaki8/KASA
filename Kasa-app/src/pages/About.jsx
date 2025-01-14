@@ -64,7 +64,7 @@ function About() {
 						<ArrowIcon2 className={`ArrowIcon2 ${openSection.service ? 'rotate' : ''}`} />
 					</button>
 					<div className={`content ${openSection.service ? 'active' : ''}`}>
-						<p>Notre équipe se tient à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.</p>
+						<p>{"Notre équipe se tient à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."}</p>
 					</div>
 				</div>
 
@@ -77,7 +77,7 @@ function About() {
 						<ArrowIcon2 className={`ArrowIcon2 ${openSection.securite ? 'rotate' : ''}`} />
 					</button>
 					<div className={`content ${openSection.securite ? 'active' : ''}`}>
-						<p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés.</p>
+						<p>{"La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés."}</p>
 					</div>
 				</div>
 			</div>
