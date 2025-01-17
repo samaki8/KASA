@@ -2,8 +2,8 @@ import image2 from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg'
 //import { useParams, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 //import { useState, useEffect } from 'react';
-//import { ArrowIcon } from '../compoments/ArrowIcon.jsx';
-import { ArrowIcon2 } from '../compoments/ArrowIcon2.jsx';
+//import { ArrowIcon } from '../components/ArrowIcon.jsx';
+import { ArrowIcon2 } from '../components/ArrowIcon2.jsx';
 import '../styles/About.css';
 
 

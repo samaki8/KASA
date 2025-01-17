@@ -3,8 +3,8 @@ import '../styles/FicheLogement.css';
 import logements from '../data/logements.json';
 import { useParams, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { ArrowIcon } from '../compoments/ArrowIcon.jsx';
-import { ArrowIcon2 } from '../compoments/ArrowIcon2.jsx';
+import { ArrowIcon } from '../components/ArrowIcon.jsx';
+import { ArrowIcon2 } from '../components/ArrowIcon2.jsx';
 
 
 function FicheLogement() {

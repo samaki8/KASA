@@ -1,4 +1,4 @@
-//Kasa-app/src/compoments/AnnoncesGrid.jsx
+//Kasa-app/src/components/AnnoncesGrid.jsx
 //import React from 'react';
 import { useState, useEffect } from 'react';
 import logements from '../data/logements.json';

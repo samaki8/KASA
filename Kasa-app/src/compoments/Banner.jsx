@@ -1,4 +1,4 @@
-//Kasa-app\src\compoments\Banner.jsx
+//Kasa-app\src\components\Banner.jsx
 import '../styles/Banner.css';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';

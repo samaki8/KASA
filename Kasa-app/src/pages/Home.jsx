@@ -1,6 +1,6 @@
 //Kasa-app\src\pages\Home.jsx
-import Background from '../compoments/Background.jsx';
-import AnnoncesGrid from '../compoments/AnnoncesGrid.jsx';
+import Background from '../components/Background.jsx';
+import AnnoncesGrid from '../components/AnnoncesGrid.jsx';
 
 function Home() {
     return (
