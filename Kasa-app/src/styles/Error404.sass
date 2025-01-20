@@ -1,68 +1,58 @@
 //Kasa-app\src\styles\Error404.sass
+// Déclaration des variables
+$primary-color: #FF6060
+$font-family-primary: 'Montserrat', sans-serif
+
 .error-page
+    display: flex
     flex-direction: column
     align-items: center
     gap: 113px
     justify-content: center
 
     h1
-        color: #FF6060
+        color: $primary-color
         text-align: center
-        font-family: Montserrat
+        font-family: $font-family-primary
         font-size: 96px
-        font-style: normal
         font-weight: 700
-        line-height: 142.6% /* 136.896px */
+        line-height: 142.6%
 
     p
-        color: #FF6060
+        color: $primary-color
         text-align: center
-        font-family: Montserrat
+        font-family: $font-family-primary
         font-size: 18px
-        font-style: normal
         font-weight: 500
-        line-height: 142.6% /* 25.668px */
+        line-height: 142.6%
 
     .error-link
         color: #000
-        font-family: Montserrat
+        font-family: $font-family-primary
         font-size: 14px
-        font-style: normal
         font-weight: 500
-        line-height: 142.6% /* 19.964px */
-        text-decoration-line: underline
-        text-decoration-style: solid
+        line-height: 142.6%
+        text-decoration: underline solid
         text-decoration-skip-ink: none
-        text-decoration-thickness: auto
-        text-underline-offset: auto
-        text-underline-position: from-font
+        background: none
+        border-color: transparent
 
         &:hover
             opacity: 0.8
 
 @media only screen and (min-width: 481px)
-.error-page
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    gap: 139px
-    min-height: calc(100vh - 300px)
+    .error-page
+        flex-wrap: wrap
+        gap: 139px
 
-    h1
-        color: #FF6060
-        text-align: center
-        font-family: Montserrat
-        font-size: 288px
-        font-style: normal
-        font-weight: 700
-        line-height: 142.6% /* 410.688px */
+        h1
+            font-size: 200px
+            line-height: 142.6%
+            margin: 0
 
-    .error-link
-        font-family: Montserrat
-        font-size: 18px
-        font-weight: 500
-        text-decoration: underline
-        margin-top: 139px
-        margin-bottom: 139px
+        p
+            font-size: 36px
+
+        .error-link
+            font-size: 18px
+            text-align: left

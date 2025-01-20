@@ -1,19 +1,22 @@
 
 .annonces-container
     padding: 20px
-    //max-width: 1440px
-    //margin: 0 auto
+    max-width: 1440px
+    margin: 0 auto
     //max-width: 1440px
     //height: 829px
     border-radius: 25px
     background: #F6F6F6
     display: flex
     justify-content: center
+    flex-wrap: wrap
+    overflow: hidden
 
 .annonces-grid
     display: grid
     gap: 22px
     grid-template-columns: 1fr
+    width: 100%
     &.desktop
         grid-template-columns: repeat(3, 1fr)
 

@@ -35,11 +35,10 @@
 }
 .carousel .carousel-btn.prev {
   left: 10px;
-  transform: translateY(-50%);
 }
 .carousel .carousel-btn.next {
   right: 10px;
-  transform: translateY(-50%) rotate(90deg);
+  transform: rotate(90deg);
 }
 .carousel .image-counter {
   position: absolute;
@@ -65,17 +64,15 @@
 }
 .logement-info .logement-header .title-location h1 {
   color: #FF6060;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  font-style: normal;
   font-weight: 500;
   line-height: 142.6%;
 }
 .logement-info .logement-header .title-location p {
   color: #000;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
   line-height: 142.6%;
 }
@@ -89,11 +86,8 @@
   color: white;
   padding: 3px 15px;
   border-radius: 10px;
-  color: #FFF;
-  text-align: center;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 10px;
-  font-style: normal;
   font-weight: 700;
   line-height: 142.6%;
 }
@@ -153,19 +147,14 @@
 }
 .logement-info .description .ArrowIconCollapse, .logement-info .equipments .ArrowIconCollapse {
   transform-origin: center;
-  transform-box: fill-box;
   transition: transform 0.3s ease;
 }
 .logement-info .description .ArrowIconCollapse.rotate, .logement-info .equipments .ArrowIconCollapse.rotate {
   transform: rotate(180deg);
 }
-.logement-info .description .arrow-rotate, .logement-info .equipments .arrow-rotate {
-  transform: rotate(180deg);
-  transform-origin: center;
-}
 .logement-info .description .content, .logement-info .equipments .content {
   background-color: #F6F6F6;
-  color: #000000;
+  color: #000;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;

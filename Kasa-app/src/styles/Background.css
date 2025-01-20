@@ -27,9 +27,8 @@
 }
 .background .tagline {
   color: #FFF;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
   line-height: 100%;
   position: absolute;
