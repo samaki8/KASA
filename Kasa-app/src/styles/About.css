@@ -45,11 +45,11 @@
   justify-content: space-between;
   align-items: center;
 }
-.about .values-container .value-item .collapsible .ArrowIcon2 {
+.about .values-container .value-item .collapsible .ArrowIconCollapse {
   transition: transform 0.3s ease;
   transform-origin: center;
 }
-.about .values-container .value-item .collapsible .ArrowIcon2.rotate {
+.about .values-container .value-item .collapsible .ArrowIconCollapse.rotate {
   transform: rotate(180deg);
 }
 .about .values-container .value-item .content {

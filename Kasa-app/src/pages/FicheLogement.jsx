@@ -3,8 +3,8 @@ import '../styles/FicheLogement.css';
 import logements from '../data/logements.json';
 import { useParams, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { ArrowIcon } from '../components/ArrowIcon.jsx';
-import { ArrowIcon2 } from '../components/ArrowIcon2.jsx';
+import { ArrowIconCarousel } from '../components/ArrowIconCarousel.jsx';
+import { ArrowIconCollapse } from '../components/ArrowIconCollapse.jsx';
 
 
 function FicheLogement() {
@@ -52,8 +52,8 @@ function FicheLogement() {
         />
         {logement.pictures.length > 1 && (
           <>
-            <button onClick={previousImage} className="carousel-btn prev"><ArrowIcon className="carousel-btn prev" />‹</button>
-            <button onClick={nextImage} className="carousel-btn next"><ArrowIcon className="carousel-btn next" />›</button>
+            <button onClick={previousImage} className="carousel-btn prev"><ArrowIconCarousel className="carousel-btn prev" />‹</button>
+            <button onClick={nextImage} className="carousel-btn next"><ArrowIconCarousel className="carousel-btn next" />›</button>
             <span className="image-counter">
               {currentImageIndex + 1}/{logement.pictures.length}
             </span>
@@ -96,7 +96,7 @@ function FicheLogement() {
             >
               <span>Description</span>
 
-              <ArrowIcon2 className={`ArrowIcon2 ${isDescriptionOpen ? 'rotate' : ''}`} />
+              <ArrowIconCollapse className={`ArrowIconCollapse ${isDescriptionOpen ? 'rotate' : ''}`} />
             </button>
             <div className={`content ${isDescriptionOpen ? 'active' : ''}`}>
               <p>{logement.description}</p>
@@ -110,7 +110,7 @@ function FicheLogement() {
             >
               <span>Équipements</span>
 
-              <ArrowIcon2 className={`ArrowIcon2 ${isEquipementsOpen ? 'rotate' : ''}`} />
+              <ArrowIconCollapse className={`ArrowIconCollapse ${isEquipementsOpen ? 'rotate' : ''}`} />
 
             </button>
             <div className={`content ${isEquipementsOpen ? 'active' : ''}`}>

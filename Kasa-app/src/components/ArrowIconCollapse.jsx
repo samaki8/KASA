@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const ArrowIcon2 = ({ className }) => (
+export const ArrowIconCollapse = ({ className }) => (
   <svg
     className={className}
     style={{ transition: 'transform 0.3s ease' }}
@@ -14,6 +14,6 @@ export const ArrowIcon2 = ({ className }) => (
   </svg>
 );
 
-ArrowIcon2.propTypes = {
+ArrowIconCollapse.propTypes = {
   className: PropTypes.string
 };

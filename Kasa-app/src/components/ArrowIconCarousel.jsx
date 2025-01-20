@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const ArrowIcon = ({ className }) => (
+export const ArrowIconCarousel = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="48"
@@ -13,6 +13,6 @@ export const ArrowIcon = ({ className }) => (
   </svg>
 );
 
-ArrowIcon.propTypes = {
+ArrowIconCarousel.propTypes = {
   className: PropTypes.string
 };

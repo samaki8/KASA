@@ -151,12 +151,12 @@
   justify-content: space-between;
   align-items: center;
 }
-.logement-info .description .ArrowIcon2, .logement-info .equipments .ArrowIcon2 {
+.logement-info .description .ArrowIconCollapse, .logement-info .equipments .ArrowIconCollapse {
   transform-origin: center;
   transform-box: fill-box;
   transition: transform 0.3s ease;
 }
-.logement-info .description .ArrowIcon2.rotate, .logement-info .equipments .ArrowIcon2.rotate {
+.logement-info .description .ArrowIconCollapse.rotate, .logement-info .equipments .ArrowIconCollapse.rotate {
   transform: rotate(180deg);
 }
 .logement-info .description .arrow-rotate, .logement-info .equipments .arrow-rotate {
