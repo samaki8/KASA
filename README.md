@@ -16,7 +16,7 @@ Démarrer le projet React et développer l’ensemble de l’application, les co
 
 ● Create React App
 ● React Router
-● Styling: L’utilisation de Sass est optionnelle. CSS est à utiliser par
+● Styling: L’utilisation de Sass est à utiliser par
 défaut.
 ● Pas de librairie React externe
 
