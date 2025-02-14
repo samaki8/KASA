@@ -1,54 +1,32 @@
 //Kasa-app/src/pages/FicheLogement.jsx
 
-import { useState } from 'react';
-import logements from '../data/logements.json';
+// FicheLogement.jsx
 import { useParams, Navigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import Carousel from '../components/Carousel';
-//import CollapseSection from '../components/CollapseSection';
-import CollapseSections from '../components/CollapseSections'; // Import du nouveau composant
+import CollapseSection from '../components/CollapseSection';
+import useFetchLogement from '../components/LogementLoader'; // Import du hook personnalisé
 import '../styles/FicheLogement.css';
+import { useState } from 'react';
 
 function FicheLogement() {
   const { id } = useParams();
-  const [logement, setLogement] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const { logement, isLoading, error } = useFetchLogement(id); // Utilisation du hook
+  const [openSection, setOpenSection] = useState(null); // État pour suivre la section ouverte
 
-  useEffect(() => {
-    const fetchLogement = async () => {
-      // Simulez un appel API ici
-      const selectedLogement = logements.find(item => item.id === id);
-      if (selectedLogement) {
-        setLogement(selectedLogement);
-      }
-      setIsLoading(false);
-    };
-    fetchLogement();
-  }, [id]);
+
 
   if (isLoading) return <div>Chargement...</div>;
+
+  // Gestion des erreurs et redirection
+  if (error) {
+    console.error(error); // Log l'erreur pour le débogage
+    return <Navigate to="/error404" />; // Redirection vers la page d'erreur
+  }
+
   if (!logement) return <Navigate to="/error404" />;
-
-  // Structure des données pour CollapseSections
-  const sectionsData = [
-    {
-      id: 'description',
-      title: 'Description',
-      content: logement.description,
-    },
-    {
-      id: 'equipements',
-      title: 'Équipements',
-      content: (
-        <ul>
-          {logement.equipments.map((equipment, index) => (
-            <li key={index}>{equipment}</li>
-          ))}
-        </ul>
-      ),
-    },
-  ];
-
+  const toggleSection = (section) => {
+    setOpenSection(prevSection => (prevSection === section ? null : section)); // Ouvrir seulement la section cliquée
+  };
   return (
     <div className="fiche-logement">
       <Carousel pictures={logement.pictures} />
@@ -76,7 +54,24 @@ function FicheLogement() {
           </div>
         </div>
         <div className="details">
-          <CollapseSections sections={sectionsData} /> {/* Utilisation du nouveau composant */}
+          <CollapseSection
+            title="Description"
+            content={logement.description}
+            isOpen={openSection === 'description'}
+            onToggle={() => toggleSection('description')}
+          />
+          <CollapseSection
+            title="Équipements"
+            content={
+              <ul>
+                {logement.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            }
+            isOpen={openSection === 'equipements'}
+            onToggle={() => toggleSection('equipements')}
+          />
         </div>
       </div>
     </div>

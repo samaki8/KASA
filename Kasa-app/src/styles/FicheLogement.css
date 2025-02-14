@@ -246,6 +246,7 @@
     flex-direction: row;
     gap: 76px;
     width: 100%;
+    align-items: flex-start;
   }
   .logement-info .details .collapsible-section {
     flex: 1;
