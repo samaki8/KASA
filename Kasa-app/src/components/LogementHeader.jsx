@@ -1,36 +1,22 @@
 
+//Kasa-app\src\components\LogementHeader.jsx
+// LogementHeader.jsx
 import PropTypes from 'prop-types';
+import LogementTitle from './LogementTitle';
+import TagList from './TagList';
+import HostRating from './HostRating';
 
 function LogementHeader({ title, location, tags, host, rating }) {
     return (
         <div className="logement-header">
-            <div className="title-location">
-                <h1>{title}</h1>
-                <p>{location}</p>
-                <div className="tags">
-                    {tags.map((tag, index) => (
-                        <span key={index} className="tag">{tag}</span>
-                    ))}
-                </div>
+            <div>
+                <LogementTitle title={title} location={location} />
+                <TagList tags={tags} />
             </div>
-
-            <div className="host-rating">
-                <div className="host">
-                    <span>{host.name}</span>
-                    <img src={host.picture} alt={host.name} />
-                </div>
-                <div className="rating">
-                    {[...Array(5)].map((_, index) => (
-                        <span key={index} className={index < parseInt(rating) ? 'star filled' : 'star'}>
-                            ★
-                        </span>
-                    ))}
-                </div>
-            </div>
+            <HostRating host={host} rating={rating} />
         </div>
     );
 }
-export default LogementHeader;
 
 LogementHeader.propTypes = {
     title: PropTypes.string.isRequired,
@@ -42,3 +28,5 @@ LogementHeader.propTypes = {
     }).isRequired,
     rating: PropTypes.string.isRequired
 };
+
+export default LogementHeader;
