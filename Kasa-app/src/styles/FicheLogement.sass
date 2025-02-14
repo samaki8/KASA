@@ -136,6 +136,7 @@ $font-family-primary: 'Montserrat', sans-serif
         background-color: $primary-color
         border-radius: 10px
         overflow: hidden
+        font-size: 13px
 
         button.collapsible
             width: 100%
@@ -164,15 +165,23 @@ $font-family-primary: 'Montserrat', sans-serif
             overflow: hidden
             transition: max-height 0.3s ease
             font-size: 13px
+            text-align: left
 
             &.active
                 max-height: 500px
                 padding: 20px 10px
+                list-style: none
+                font-size: 18PX
 
             p, ul
                 margin: 0
                 padding: 0
                 list-style: none
+                size: 18px
+                padding-left: 15px
+                text-align: left
+                line-height: 142.6%
+                font-family: $font-family-primary
 
 @media only screen and (min-width: 481px)
     .fiche-logement
@@ -238,12 +247,17 @@ $font-family-primary: 'Montserrat', sans-serif
                         font-size: 24px
 
         .details
+            display: flex
             flex-direction: row
             gap: 76px
+            width: 100%
 
             .collapsible-section
                 flex: 1
 
-            button.collapsible
-                font-size: 18px
-                padding: 15px 20px
+                button.collapsible
+                    font-size: 24px
+                    padding: 15px 20px
+                .content
+                    p
+                        font-size: 18px

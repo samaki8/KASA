@@ -131,6 +131,7 @@
   background-color: #FF6060;
   border-radius: 10px;
   overflow: hidden;
+  font-size: 13px;
 }
 .logement-info .collapsible-section button.collapsible {
   width: 100%;
@@ -159,15 +160,23 @@
   overflow: hidden;
   transition: max-height 0.3s ease;
   font-size: 13px;
+  text-align: left;
 }
 .logement-info .collapsible-section .content.active {
   max-height: 500px;
   padding: 20px 10px;
+  list-style: none;
+  font-size: 18PX;
 }
 .logement-info .collapsible-section .content p, .logement-info .collapsible-section .content ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  size: 18px;
+  padding-left: 15px;
+  text-align: left;
+  line-height: 142.6%;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media only screen and (min-width: 481px) {
@@ -233,14 +242,19 @@
     font-size: 24px;
   }
   .logement-info .details {
+    display: flex;
     flex-direction: row;
     gap: 76px;
+    width: 100%;
   }
   .logement-info .details .collapsible-section {
     flex: 1;
   }
-  .logement-info .details button.collapsible {
-    font-size: 18px;
+  .logement-info .details .collapsible-section button.collapsible {
+    font-size: 24px;
     padding: 15px 20px;
+  }
+  .logement-info .details .collapsible-section .content p {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=FicheLogement.css.map */

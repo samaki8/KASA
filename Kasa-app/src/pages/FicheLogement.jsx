@@ -1,24 +1,15 @@
 //Kasa-app/src/pages/FicheLogement.jsx
 
-import { useState } from 'react'; // Import useState
+import { useState } from 'react';
 import logements from '../data/logements.json';
 import { useParams, Navigate } from 'react-router-dom';
-import { useEffect, } from 'react';
+import { useEffect } from 'react';
 import Carousel from '../components/Carousel';
-import CollapseSection from '../components/CollapseSection';
+//import CollapseSection from '../components/CollapseSection';
+import CollapseSections from '../components/CollapseSections'; // Import du nouveau composant
 import '../styles/FicheLogement.css';
 
 function FicheLogement() {
-  // Déclarez les états pour chaque section
-  /*
-  const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
-  const [isEquipementsOpen, setIsEquipementsOpen] = useState(false);
-  */
-  const [openSection, setOpenSection] = useState(null); // État pour suivre la section ouverte
-
-  const toggleSection = (section) => {
-    setOpenSection(prevSection => (prevSection === section ? null : section)); // Ouvrir seulement la section cliquée
-  };
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +28,26 @@ function FicheLogement() {
 
   if (isLoading) return <div>Chargement...</div>;
   if (!logement) return <Navigate to="/error404" />;
+
+  // Structure des données pour CollapseSections
+  const sectionsData = [
+    {
+      id: 'description',
+      title: 'Description',
+      content: logement.description,
+    },
+    {
+      id: 'equipements',
+      title: 'Équipements',
+      content: (
+        <ul>
+          {logement.equipments.map((equipment, index) => (
+            <li key={index}>{equipment}</li>
+          ))}
+        </ul>
+      ),
+    },
+  ];
 
   return (
     <div className="fiche-logement">
@@ -65,26 +76,7 @@ function FicheLogement() {
           </div>
         </div>
         <div className="details">
-          <CollapseSection
-
-            title="Description"
-            content={logement.description}
-            isOpen={openSection === 'description'}
-            onToggle={() => toggleSection('description')}
-          />
-          <CollapseSection
-
-            title="Équipements"
-            content={
-              <ul>
-                {logement.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
-                ))}
-              </ul>
-            }
-            isOpen={openSection === 'equipements'}
-            onToggle={() => toggleSection('equipements')}
-          />
+          <CollapseSections sections={sectionsData} /> {/* Utilisation du nouveau composant */}
         </div>
       </div>
     </div>
