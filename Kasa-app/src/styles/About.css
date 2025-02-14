@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  background-color: "yellow";
+  font-family: "Montserrat", sans-serif;
 }
 .about .values-container .collapsible-section {
   width: 100%;
@@ -62,6 +62,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Montserrat", sans-serif;
 }
 .about .values-container .collapsible-section .ArrowIconCollapse {
   transition: transform 0.3s ease;
@@ -72,7 +73,7 @@
 }
 .about .values-container .collapsible-section .content {
   background-color: #F6F6F6;
-  color: #FF6060;
+  color: #FFFFFF;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
@@ -121,10 +122,12 @@
     flex-direction: column;
   }
   .about .values-container .collapsible-section button.collapsible {
-    font-size: 18px;
+    font-size: 24px;
     padding: 15px 20px;
+    font-weight: 700;
+    line-height: 34.22px;
   }
-  .about .values-container .collapsible-section .content p {
-    font-size: 18px;
+  .about .values-container .collapsible-section .content.active p {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=About.css.map */
