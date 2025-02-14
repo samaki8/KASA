@@ -6,6 +6,7 @@ import { useState } from 'react';
 //import { ArrowIconCollapse } from '../components/ArrowIconCollapse.jsx';
 import '../styles/About.css';
 import CollapsibleSection from '../components/CollapseSection.jsx';
+import Background from '../components/Background.jsx';
 
 
 function About() {
@@ -17,9 +18,11 @@ function About() {
 
 	return (
 		<div className="about">
-			<div className="banner">
-				<img src={image2} alt="Paysage" />
-			</div>
+			<Background
+				imageSrc={image2}
+				altText='image 2'
+				tagline=''
+			/>
 
 			<div className="values-container">
 				<CollapsibleSection // 
