@@ -127,12 +127,12 @@
   width: 100%;
   margin-top: 24px;
 }
-.logement-info .description, .logement-info .equipments {
+.logement-info .collapsible-section {
   background-color: #FF6060;
   border-radius: 10px;
   overflow: hidden;
 }
-.logement-info .description button.collapsible, .logement-info .equipments button.collapsible {
+.logement-info .collapsible-section button.collapsible {
   width: 100%;
   padding: 10px 20px;
   background-color: #FF6060;
@@ -145,14 +145,14 @@
   justify-content: space-between;
   align-items: center;
 }
-.logement-info .description .ArrowIconCollapse, .logement-info .equipments .ArrowIconCollapse {
+.logement-info .collapsible-section .ArrowIconCollapse {
   transform-origin: center;
   transition: transform 0.3s ease;
 }
-.logement-info .description .ArrowIconCollapse.rotate, .logement-info .equipments .ArrowIconCollapse.rotate {
+.logement-info .collapsible-section .ArrowIconCollapse.rotate {
   transform: rotate(180deg);
 }
-.logement-info .description .content, .logement-info .equipments .content {
+.logement-info .collapsible-section .content {
   background-color: #F6F6F6;
   color: #000;
   max-height: 0;
@@ -160,11 +160,11 @@
   transition: max-height 0.3s ease;
   font-size: 13px;
 }
-.logement-info .description .content.active, .logement-info .equipments .content.active {
+.logement-info .collapsible-section .content.active {
   max-height: 500px;
-  padding: 20px 0;
+  padding: 20px 10px;
 }
-.logement-info .description .content p, .logement-info .description .content ul, .logement-info .equipments .content p, .logement-info .equipments .content ul {
+.logement-info .collapsible-section .content p, .logement-info .collapsible-section .content ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -236,7 +236,7 @@
     flex-direction: row;
     gap: 76px;
   }
-  .logement-info .details .description, .logement-info .details .equipments {
+  .logement-info .details .collapsible-section {
     flex: 1;
   }
   .logement-info .details button.collapsible {

@@ -1,4 +1,100 @@
 //Kasa-app/src/pages/FicheLogement.jsx
+
+import { useState } from 'react'; // Import useState
+import logements from '../data/logements.json';
+import { useParams, Navigate } from 'react-router-dom';
+import { useEffect, } from 'react';
+import Carousel from '../components/Carousel';
+import CollapseSection from '../components/CollapseSection';
+import '../styles/FicheLogement.css';
+
+function FicheLogement() {
+  // Déclarez les états pour chaque section
+  /*
+  const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
+  const [isEquipementsOpen, setIsEquipementsOpen] = useState(false);
+  */
+  const [openSection, setOpenSection] = useState(null); // État pour suivre la section ouverte
+
+  const toggleSection = (section) => {
+    setOpenSection(prevSection => (prevSection === section ? null : section)); // Ouvrir seulement la section cliquée
+  };
+  const { id } = useParams();
+  const [logement, setLogement] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchLogement = async () => {
+      // Simulez un appel API ici
+      const selectedLogement = logements.find(item => item.id === id);
+      if (selectedLogement) {
+        setLogement(selectedLogement);
+      }
+      setIsLoading(false);
+    };
+    fetchLogement();
+  }, [id]);
+
+  if (isLoading) return <div>Chargement...</div>;
+  if (!logement) return <Navigate to="/error404" />;
+
+  return (
+    <div className="fiche-logement">
+      <Carousel pictures={logement.pictures} />
+      <div className="logement-info">
+        <div className="logement-header">
+          <div className="title-location">
+            <h1>{logement.title}</h1>
+            <p>{logement.location}</p>
+            <div className="tags">
+              {logement.tags.map((tag, index) => (
+                <span key={index} className="tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+          <div className="host-rating">
+            <div className="host">
+              <span>{logement.host.name}</span>
+              <img src={logement.host.picture} alt={logement.host.name} />
+            </div>
+            <div className="rating">
+              {[...Array(5)].map((_, index) => (
+                <span key={index} className={index < parseInt(logement.rating) ? 'star filled' : 'star'}>★</span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="details">
+          <CollapseSection
+
+            title="Description"
+            content={logement.description}
+            isOpen={openSection === 'description'}
+            onToggle={() => toggleSection('description')}
+          />
+          <CollapseSection
+
+            title="Équipements"
+            content={
+              <ul>
+                {logement.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            }
+            isOpen={openSection === 'equipements'}
+            onToggle={() => toggleSection('equipements')}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default FicheLogement;
+
+
+/*
 import '../styles/FicheLogement.css';
 import logements from '../data/logements.json';
 import { useParams, Navigate } from 'react-router-dom';
@@ -128,6 +224,6 @@ function FicheLogement() {
 }
 
 export default FicheLogement;
-
+*/
 
 

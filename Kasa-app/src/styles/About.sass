@@ -1,3 +1,8 @@
+// Variables
+$primary-color: #FF6060
+$background-color-light: #F6F6F6
+$font-family-primary: 'Montserrat', sans-serif
+
 .about
     display: flex
     flex-direction: column
@@ -27,17 +32,35 @@
         display: flex
         flex-direction: column
         gap: 30px
+        background-color: "yellow"
 
-        .value-item
+        .collapsible-section
             width: 100%
+            padding: 10px 20px
+            background-color: #FF6060
+            color: white
+            border: none
+            border-radius: 5px
+            text-align: left
+            font-size: 13px
+            cursor: pointer
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 1023
+            height: 54
+            border-radius: 5px
+            padding-top: 10px
+            padding-right: 20px
+            padding-bottom: 10px
+            padding-left: 15px
 
-            .collapsible
+            button.collapsible
                 width: 100%
                 padding: 10px 20px
-                background-color: #FF6060
+                background-color: $primary-color
                 color: white
                 border: none
-                border-radius: 5px
                 text-align: left
                 font-size: 13px
                 cursor: pointer
@@ -45,12 +68,12 @@
                 justify-content: space-between
                 align-items: center
 
-                .ArrowIconCollapse
-                    transition: transform 0.3s ease
-                    transform-origin: center
+            .ArrowIconCollapse
+                transition: transform 0.3s ease
+                transform-origin: center
 
-                    &.rotate
-                        transform: rotate(180deg)
+                &.rotate
+                    transform: rotate(180deg)
 
             .content
                 background-color: #F6F6F6
@@ -64,10 +87,11 @@
                     max-height: 500px
                     padding: 20px
 
-                p
-                    margin: 0
-                    font-size: 12px
-                    line-height: 142.6%
+                    p
+                        margin: 0
+                        font-size: 12px
+                        line-height: 142.6%
+                        color: #000000
 
 @media only screen and (min-width: 768px)
     .about
@@ -79,11 +103,29 @@
                 border-radius: 25px
                 height: 223px
         .values-container
-            .value-item
-                .collapsible
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            gap: 30px
+            width: 80%
+            .collapsible-section
+                font-size: 18px
+                padding: 15px 20px
+                width: 1023
+                height: 54
+                border-radius: 5px
+                padding-top: 10px
+                padding-right: 20px
+                padding-bottom: 10px
+                padding-left: 15px
+                display: flex
+                flex-direction: column
+
+                button.collapsible
                     font-size: 18px
                     padding: 15px 20px
 
                 .content
                     p
-                        font-size: 16px
+                        font-size: 18px
