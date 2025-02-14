@@ -7,6 +7,7 @@ import CollapseSection from '../components/CollapseSection';
 import useFetchLogement from '../components/LogementLoader'; // Import du hook personnalisé
 import '../styles/FicheLogement.css';
 import { useState } from 'react';
+import LogementHeader from '../components/LogementHeader';
 
 function FicheLogement() {
   const { id } = useParams();
@@ -23,7 +24,6 @@ function FicheLogement() {
     return <Navigate to="/error404" />; // Redirection vers la page d'erreur
   }
 
-  if (!logement) return <Navigate to="/error404" />;
   const toggleSection = (section) => {
     setOpenSection(prevSection => (prevSection === section ? null : section)); // Ouvrir seulement la section cliquée
   };
@@ -31,28 +31,15 @@ function FicheLogement() {
     <div className="fiche-logement">
       <Carousel pictures={logement.pictures} />
       <div className="logement-info">
-        <div className="logement-header">
-          <div className="title-location">
-            <h1>{logement.title}</h1>
-            <p>{logement.location}</p>
-            <div className="tags">
-              {logement.tags.map((tag, index) => (
-                <span key={index} className="tag">{tag}</span>
-              ))}
-            </div>
-          </div>
-          <div className="host-rating">
-            <div className="host">
-              <span>{logement.host.name}</span>
-              <img src={logement.host.picture} alt={logement.host.name} />
-            </div>
-            <div className="rating">
-              {[...Array(5)].map((_, index) => (
-                <span key={index} className={index < parseInt(logement.rating) ? 'star filled' : 'star'}>★</span>
-              ))}
-            </div>
-          </div>
-        </div>
+        {logement && ( // Vérification que logement est défini
+          <LogementHeader
+            title={logement.title}
+            location={logement.location}
+            tags={logement.tags}
+            host={logement.host}
+            rating={logement.rating}
+          />
+        )}
         <div className="details">
           <CollapseSection
             title="Description"
