@@ -1,11 +1,11 @@
-//Kasa-app/src/components/AnnoncesGrid.jsx
+//Kasa-app/src/components/ResidenceGrid.jsx
 //import React from 'react';
 import { useState, useEffect } from 'react';
 import logements from '../data/logements.json';
-import '../styles/AnnoncesGrid.css';
+import '../styles/ResidenceGrid.css';
 import { Link } from 'react-router-dom';
 
-function AnnoncesGrid() {
+function ResidenceGrid() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -21,9 +21,9 @@ function AnnoncesGrid() {
     <div className="annonces-container">
       <div className={`annonces-grid ${windowWidth <= 768 ? 'mobile' : 'desktop'}`}>
         {logements.map((logement) => (
-          <Link 
-            key={logement.id} 
-            to={`/logement/${logement.id}`} 
+          <Link
+            key={logement.id}
+            to={`/logement/${logement.id}`}
             className="annonce-card"
           >
             <img src={logement.cover} className="annonce-image" alt={logement.title} />
@@ -36,4 +36,4 @@ function AnnoncesGrid() {
 }
 
 
-export default AnnoncesGrid;
+export default ResidenceGrid;

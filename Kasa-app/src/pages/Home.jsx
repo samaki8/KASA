@@ -1,6 +1,6 @@
 //Kasa-app\src\pages\Home.jsx
 import Background from '../components/Background.jsx';
-import AnnoncesGrid from '../components/AnnoncesGrid.jsx';
+import ResidenceGrid from '../components/ResidenceGrid.jsx'
 import image1 from '../assets/image1.jpg'
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
                 tagline='Chez vous, partout et ailleurs'
             />
 
-            <AnnoncesGrid />
+            <ResidenceGrid />
         </div>
     );
 }
