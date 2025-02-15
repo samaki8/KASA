@@ -31,7 +31,7 @@ function FicheLogement() {
     <div className="fiche-logement">
       <Carousel pictures={logement.pictures} />
       <div className="logement-info">
-        {logement && ( // Vérification que logement est défini
+        {logement && (
           <LogementHeader
             title={logement.title}
             location={logement.location}
