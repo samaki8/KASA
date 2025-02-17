@@ -6,10 +6,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   margin: 0;
   box-sizing: border-box;
-  margin-top: 50px;
+  margin-top: 3.125rem;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
@@ -17,7 +17,7 @@
 }
 .footer .content {
   width: 100%;
-  max-width: 1440px;
+  max-width: 90rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -25,27 +25,27 @@
 }
 
 .LogoDark img {
-  width: 122px;
-  height: 40px;
+  width: 7.625rem;
+  height: 2.5rem;
 }
 
 .text-footer {
   color: #FFF;
   font-family: Montserrat;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   text-align: center;
 }
 
 @media only screen and (min-width: 481px) {
   .footer {
     display: flex;
-    height: 209px;
-    padding: 66px 464px 29px 463px;
+    height: 13.0625rem;
+    padding: 4.125rem 29rem 1.8125rem 28.9375rem;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    gap: 28.556px;
+    gap: 1.7848rem;
   }
 }/*# sourceMappingURL=Footer.css.map */

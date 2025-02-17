@@ -3,23 +3,23 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .logo {
-  width: 145px;
-  height: 46px;
+  width: 9.0625rem;
+  height: 2.875rem;
 }
 
 .nav {
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
 }
 .nav a {
   color: #000000;
   text-align: right;
   font-family: Montserrat;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   line-height: 142.6%;
   text-decoration: none;
@@ -31,18 +31,18 @@
 
 @media only screen and (min-width: 481px) {
   .header {
-    height: 68px;
-    padding-top: 45px;
-    padding-bottom: 50px;
+    height: 4.25rem;
+    padding-top: 2.8125rem;
+    padding-bottom: 3.125rem;
   }
   .logo {
-    width: 210.32px;
-    height: 68px;
+    width: 13.145rem;
+    height: 4.25rem;
   }
   .nav a {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 142.6%;
-    margin-left: 20px;
-    gap: 57px;
+    margin-left: 1.25rem;
+    gap: 3.5625rem;
   }
 }/*# sourceMappingURL=Banner.css.map */

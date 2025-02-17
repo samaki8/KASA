@@ -1,7 +1,7 @@
 .background {
   position: relative;
   width: 100%;
-  padding-bottom: 22px;
+  padding-bottom: 1.375rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,15 +12,15 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 111px;
+  height: 6.9375rem;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 .background img {
   width: 100%;
-  height: 111px;
-  border-radius: 10px;
+  height: 6.9375rem;
+  border-radius: 0.625rem;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 0;
@@ -28,7 +28,7 @@
 .background .tagline {
   color: #FFF;
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 100%;
   position: absolute;
@@ -38,29 +38,29 @@
   z-index: 2;
   text-align: center;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width: 481px) {
   .background {
-    height: 223px;
-    border-radius: 25px;
-    padding-bottom: 43px;
+    height: 13.9375rem;
+    border-radius: 1.5625rem;
+    padding-bottom: 2.6875rem;
   }
   .background::before {
-    border-radius: 25px;
-    height: 223px;
+    border-radius: 1.5625rem;
+    height: 13.9375rem;
   }
   .background img {
-    border-radius: 25px;
-    height: 223px;
+    border-radius: 1.5625rem;
+    height: 13.9375rem;
   }
   .background .tagline {
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 142.6%;
     width: auto;
-    padding: 0 40px;
+    padding: 0 2.5rem;
     white-space: nowrap;
   }
 }/*# sourceMappingURL=Background.css.map */

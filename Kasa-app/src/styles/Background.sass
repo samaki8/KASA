@@ -6,7 +6,7 @@ $font-family-primary: 'Montserrat', sans-serif
 .background
     position: relative
     width: 100%
-    padding-bottom: 22px
+    padding-bottom: 1.375rem // 22px
     display: flex
     justify-content: center
     align-items: center
@@ -17,22 +17,22 @@ $font-family-primary: 'Montserrat', sans-serif
         top: 0
         left: 0
         width: 100%
-        height: 111px
+        height: 6.9375rem // 111px
         background: $background-color-overlay
         z-index: 1
-        border-radius: 10px
+        border-radius: 0.625rem // 10px
 
     img
         width: 100%
-        height: 111px
-        border-radius: 10px
+        height: 6.9375rem // 111px
+        border-radius: 0.625rem // 10px
         object-fit: cover
         z-index: 0
 
     .tagline
         color: $primary-color
         font-family: $font-family-primary
-        font-size: 24px
+        font-size: 1.5rem // 24px
         font-weight: 700
         line-height: 100%
         position: absolute
@@ -42,26 +42,26 @@ $font-family-primary: 'Montserrat', sans-serif
         z-index: 2
         text-align: center
         width: 100%
-        padding: 0 20px
+        padding: 0 1.25rem // 20px
         box-sizing: border-box
 
 @media only screen and (min-width: 481px)
     .background
-        height: 223px
-        border-radius: 25px
-        padding-bottom: 43px
+        height: 13.9375rem // 223px
+        border-radius: 1.5625rem // 25px
+        padding-bottom: 2.6875rem // 43px
 
         &::before
-            border-radius: 25px
-            height: 223px
+            border-radius: 1.5625rem // 25px
+            height: 13.9375rem // 223px
 
         img
-            border-radius: 25px
-            height: 223px
+            border-radius: 1.5625rem // 25px
+            height: 13.9375rem // 223px
 
         .tagline
-            font-size: 48px
+            font-size: 3rem // 48px
             line-height: 142.6%
             width: auto
-            padding: 0 40px
+            padding: 0 2.5rem // 40px
             white-space: nowrap

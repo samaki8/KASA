@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 113px;
+  gap: 7.0625rem;
   justify-content: center;
 }
 .error-page h1 {
   color: #FF6060;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 96px;
+  font-size: 6rem;
   font-weight: 700;
   line-height: 142.6%;
 }
@@ -17,14 +17,14 @@
   color: #FF6060;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   line-height: 142.6%;
 }
 .error-page .error-link {
   color: #000;
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 142.6%;
   -webkit-text-decoration: underline solid;
@@ -41,18 +41,18 @@
 @media only screen and (min-width: 481px) {
   .error-page {
     flex-wrap: wrap;
-    gap: 139px;
+    gap: 8.6875rem;
   }
   .error-page h1 {
-    font-size: 200px;
+    font-size: 12.5rem;
     line-height: 142.6%;
     margin: 0;
   }
   .error-page p {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
   .error-page .error-link {
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: left;
   }
 }/*# sourceMappingURL=Error404.css.map */
