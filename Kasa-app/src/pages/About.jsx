@@ -1,56 +1,68 @@
-import image2 from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg'
-//import { useParams, Navigate } from 'react-router-dom';
+import image2 from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.jpg';
 import { useState } from 'react';
-//import { useState, useEffect } from 'react';
-//import { ArrowIconCarousel } from '../components/ArrowIconCarousel.jsx';
-//import { ArrowIconCollapse } from '../components/ArrowIconCollapse.jsx';
 import '../styles/About.css';
 import CollapsibleSection from '../components/CollapseSection.jsx';
 import Background from '../components/Background.jsx';
 
-
 function About() {
+	// Utilisation d'un objet pour gérer plusieurs sections ouvertes
+	const [openSections, setOpenSections] = useState({
+		fiabilite: false,
+		respect: false,
+		service: false,
+		securite: false
+	});
+
+	// Fonction pour basculer l'état d'une section spécifique
+	const toggleSection = (section) => {
+		setOpenSections((prevSections) => ({
+			...prevSections,
+			[section]: !prevSections[section] // Inverse l'état de la section cliquée
+		}));
+	};
+	/*
 	const [openSection, setOpenSection] = useState(null); // État pour suivre la section ouverte
 
 	const toggleSection = (section) => {
-		setOpenSection(prevSection => (prevSection === section ? null : section)); // Ouvrir seulement la section cliquée
-	};
+	setOpenSection(prevSection => (prevSection === section ? null : section)); // Ouvrir seulement la section cliquée
+			};
+	*/
 
 	return (
 		<div className="about">
 			<Background
 				imageSrc={image2}
-				altText='image 2'
-				tagline=''
+				altText="image 2"
+				tagline=""
 			/>
 
 			<div className="values-container">
-				<CollapsibleSection // 
+				<CollapsibleSection
 					title="Fiabilité"
 					content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
-					isOpen={openSection === 'fiabilite'}
-					onToggle={() => toggleSection('fiabilite')}
+					isOpen={openSections.fiabilite} // Vérifie si "fiabilite" est ouvert
+					onToggle={() => toggleSection('fiabilite')} // Basculer "fiabilite"
 				/>
 
 				<CollapsibleSection
 					title="Respect"
 					content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
-					isOpen={openSection === 'respect'}
-					onToggle={() => toggleSection('respect')}
+					isOpen={openSections.respect} // Vérifie si "respect" est ouvert
+					onToggle={() => toggleSection('respect')} // Basculer "respect"
 				/>
 
 				<CollapsibleSection
 					title="Service"
 					content="Notre équipe se tient à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
-					isOpen={openSection === 'service'}
-					onToggle={() => toggleSection('service')}
+					isOpen={openSections.service} // Vérifie si "service" est ouvert
+					onToggle={() => toggleSection('service')} // Basculer "service"
 				/>
 
 				<CollapsibleSection
 					title="Sécurité"
 					content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés."
-					isOpen={openSection === 'securite'}
-					onToggle={() => toggleSection('securite')}
+					isOpen={openSections.securite} // Vérifie si "securite" est ouvert
+					onToggle={() => toggleSection('securite')} // Basculer "securite"
 				/>
 			</div>
 		</div>
@@ -58,6 +70,7 @@ function About() {
 }
 
 export default About;
+
 
 /*
 function About() {

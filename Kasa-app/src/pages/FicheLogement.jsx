@@ -12,8 +12,11 @@ import LogementHeader from '../components/LogementHeader';
 function FicheLogement() {
   const { id } = useParams();
   const { logement, isLoading, error } = useFetchLogement(id); // Utilisation du hook
-  const [openSection, setOpenSection] = useState(null); // État pour suivre la section ouverte
-
+  //const [openSection, setOpenSection] = useState(null); // État pour suivre la section ouverte
+  const [openSections, setOpenSections] = useState({
+    description: false,
+    equipements: false,
+  });
 
 
   if (isLoading) return <div>Chargement...</div>;
@@ -25,8 +28,9 @@ function FicheLogement() {
   }
 
   const toggleSection = (section) => {
-    setOpenSection(prevSection => (prevSection === section ? null : section)); // Ouvrir seulement la section cliquée
+    setOpenSections((prevSections) => ({ ...prevSections, [section]: !prevSections[section] }));
   };
+
   return (
     <div className="fiche-logement">
       <Carousel pictures={logement.pictures} />
@@ -44,7 +48,7 @@ function FicheLogement() {
           <CollapseSection
             title="Description"
             content={logement.description}
-            isOpen={openSection === 'description'}
+            isOpen={openSections.description}
             onToggle={() => toggleSection('description')}
           />
           <CollapseSection
@@ -56,7 +60,7 @@ function FicheLogement() {
                 ))}
               </ul>
             }
-            isOpen={openSection === 'equipements'}
+            isOpen={openSections.equipements}
             onToggle={() => toggleSection('equipements')}
           />
         </div>
