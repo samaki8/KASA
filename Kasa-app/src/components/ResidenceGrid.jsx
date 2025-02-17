@@ -1,25 +1,12 @@
-//Kasa-app/src/components/ResidenceGrid.jsx
 //import React from 'react';
-import { useState, useEffect } from 'react';
 import logements from '../data/logements.json';
 import '../styles/ResidenceGrid.css';
 import { Link } from 'react-router-dom';
 
 function ResidenceGrid() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <div className="annonces-container">
-      <div className={`annonces-grid ${windowWidth <= 768 ? 'mobile' : 'desktop'}`}>
+      <div className="annonces-grid">
         {logements.map((logement) => (
           <Link
             key={logement.id}
@@ -35,5 +22,5 @@ function ResidenceGrid() {
   );
 }
 
-
 export default ResidenceGrid;
+

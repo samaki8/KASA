@@ -1,13 +1,12 @@
 .annonces-container {
   padding: 1.25rem;
+  margin: 22px 0;
   max-width: 90rem;
-  margin: 0 auto;
   border-radius: 1.5625rem;
   background: #F6F6F6;
-  display: flex;
+  display: grid;
   justify-content: center;
-  flex-wrap: wrap;
-  overflow: hidden;
+  place-items: center;
 }
 
 .annonces-grid {
@@ -15,26 +14,27 @@
   gap: 1.375rem;
   grid-template-columns: 1fr;
   width: 100%;
-}
-.annonces-grid.desktop {
-  grid-template-columns: repeat(3, 1fr);
-}
-.annonces-grid.mobile {
-  grid-template-columns: 1fr;
-  justify-items: center;
   margin: 0 auto;
+  justify-items: center;
+  align-items: center;
 }
 
 .annonce-card {
   position: relative;
   border-radius: 0.625rem;
-  width: 20.9375rem;
-  height: 15.9375rem;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/0.76;
+  box-sizing: border-box;
 }
 
+/*position: relative
+ * border-radius: 0.625rem
+ * width: 20.9375rem
+ * height: 15.9375rem*/
 .annonce-image {
-  width: 20.9375rem;
-  height: 15.9375rem;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   flex-shrink: 0;
@@ -42,6 +42,8 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.2) 99.99%, rgba(0, 0, 0, 0.5) 100%);
 }
 
+/*width: 20.9375rem
+ * height: 15.9375rem*/
 .annonce-title {
   position: absolute;
   bottom: 0;
@@ -54,13 +56,13 @@
   text-align: start;
 }
 
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 780px) {
   .annonces-container {
     padding: 2.875rem 2.25rem;
   }
   .annonces-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 3.75rem 3.125rem;
+    gap: 2rem;
   }
   .annonce-image {
     width: 21.25rem;
@@ -68,6 +70,6 @@
   }
   .annonce-card {
     width: 21.25rem;
-    height: 21.25rem;
+    height: auto;
   }
 }/*# sourceMappingURL=ResidenceGrid.css.map */

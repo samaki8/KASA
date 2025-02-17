@@ -255,7 +255,7 @@
     font-size: 1.5rem;
     padding: 0.9375rem 1.25rem;
   }
-  .logement-info .details .collapsible-section .content p {
+  .logement-info .details .collapsible-section .content:active p {
     font-size: 1.125rem;
   }
 }/*# sourceMappingURL=FicheLogement.css.map */
