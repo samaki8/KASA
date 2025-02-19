@@ -217,18 +217,20 @@ $font-family-primary: 'Montserrat', sans-serif
             border-radius: 1.5625rem // 25px
 
         .carousel-btn
-            width: 3rem // 48px
-            height: 3rem // 48px
+            width: 96px
+            height: 119px
+            top: 50%
+            transform: translateY(-50%)
 
             &.prev
-                left: 0.625rem // 10px
+                left: 23.36px
 
             &.next
-                right: 0.625rem // 10px
-
-            //.carousel-btn.next svg
-              // transform: rotate(90deg)
-
+                right: 23.36px
+            svg
+                width: 48px
+                height: 48px
+                fill: white
         .image-counter
             font-size: 1.125rem // 18px
 
@@ -298,7 +300,15 @@ $font-family-primary: 'Montserrat', sans-serif
                             font-size: 1.125rem // 18px
 
 // Styles pour les tablettes
-/*    @media only screen and (min-width: 768px) and (max-width: 1023px)
- .carousel
- width: 80%
- margin: 43 auto*/
+    @media only screen and (min-width: 768px) and (max-width: 1023px)
+    .carousel
+        .carousel-btn
+
+            width: 46.68px
+            height: 79.2px
+            top: 8.4px
+            &.prev
+                left: 23.36px
+
+            &.next
+                right: 23.36px
