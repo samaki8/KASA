@@ -1,4 +1,5 @@
-import { ArrowIconCarousel } from './ArrowIconCarousel.jsx';
+import { ArrowIconPrev } from './ArrowIconPrev.jsx';
+import { ArrowIconNext } from './ArrowIconNext.jsx';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
@@ -26,11 +27,12 @@ function Carousel({ pictures }) {
             {pictures.length > 1 && (
                 <>
                     <button onClick={previousImage} className="carousel-btn prev">
-                        <ArrowIconCarousel className="carousel-btn prev" />‹
+                        <ArrowIconPrev className="carousel-btn prev" />
                     </button>
                     <button onClick={nextImage} className="carousel-btn next">
-                        <ArrowIconCarousel className="carousel-btn next" />›
+                        <ArrowIconNext className="carousel-btn next" />
                     </button>
+
                     <span className="image-counter">
                         {currentImageIndex + 1}/{pictures.length}
                     </span>
@@ -39,8 +41,9 @@ function Carousel({ pictures }) {
         </div>
     );
 }
-export default Carousel;
 
 Carousel.propTypes = {
     pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
+
+export default Carousel;

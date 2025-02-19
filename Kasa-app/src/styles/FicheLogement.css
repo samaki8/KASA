@@ -4,27 +4,43 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 100%;
 }
 
 .carousel {
   position: relative;
-  width: 20.9375rem;
-  height: 15.9375rem;
-  flex-shrink: 0;
+  width: 95%;
+  max-width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 43px auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  aspect-ratio: 16/9;
 }
 .carousel img {
-  width: 100%;
+  border-radius: 10px;
+  bottom: 0;
   height: 100%;
+  left: 0;
+  mix-blend-mode: normal;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 0.625rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  align-items: center;
+  display: flex;
 }
 .carousel .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 3rem;
+  height: 3rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -33,12 +49,16 @@
   align-items: center;
   justify-content: center;
 }
+.carousel .carousel-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
 .carousel .carousel-btn.prev {
-  left: 0.625rem;
+  left: 1rem;
 }
 .carousel .carousel-btn.next {
-  right: 0.625rem;
-  transform: rotate(90deg);
+  right: 1rem;
 }
 .carousel .image-counter {
   position: absolute;
@@ -194,6 +214,12 @@
     width: 3rem;
     height: 3rem;
   }
+  .carousel .carousel-btn.prev {
+    left: 0.625rem;
+  }
+  .carousel .carousel-btn.next {
+    right: 0.625rem;
+  }
   .carousel .image-counter {
     font-size: 1.125rem;
   }
@@ -258,4 +284,8 @@
   .logement-info .details .collapsible-section .content:active p {
     font-size: 1.125rem;
   }
-}/*# sourceMappingURL=FicheLogement.css.map */
+}
+/*    @media only screen and (min-width: 768px) and (max-width: 1023px)
+ * .carousel
+ * width: 80%
+ * margin: 43 auto*//*# sourceMappingURL=FicheLogement.css.map */

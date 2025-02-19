@@ -1,3 +1,4 @@
+//Kasa-app/src/components/ArrowIconCollapse.jsx
 import PropTypes from 'prop-types';
 
 export const ArrowIconCollapse = ({ className }) => (

@@ -1,3 +1,4 @@
+// Kasa-app\src\components\ArrowIconCarousel.jsx
 import PropTypes from 'prop-types';
 
 export const ArrowIconCarousel = ({ className }) => (

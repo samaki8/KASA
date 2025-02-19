@@ -10,8 +10,8 @@ function Banner() {
         <img src={logo} alt="Kasa" className="logo" />
       </Link>
       <nav className="nav">
-        <Link to="/">ACCUEIL</Link>
-        <Link to="/about">A PROPOS</Link>
+        <Link to="/">Accueil</Link>
+        <Link to="/about">A propos</Link>
       </nav>
     </header>
   );

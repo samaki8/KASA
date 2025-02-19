@@ -49,10 +49,14 @@ a
 
 // Styles du corps de la page
 body
-  margin: 0
+
   padding: 0
   display: flex
   place-items: center
+
+  max-width: 1440px
+  padding-top: 40px
+  margin: 0 auto
 
 // Styles des titres
 h1
@@ -65,7 +69,8 @@ h1
 // Media query pour les écrans plus larges
 @media only screen and (min-width: 481px)
   body
-    margin: 0 6.25rem 0 6.25rem // 6.25em = 100px
+    //margin: 0 6.25rem 0 6.25rem // 6.25em = 100px
+    padding-top: 20px
 
   h1
     font-size: 3rem // 48px

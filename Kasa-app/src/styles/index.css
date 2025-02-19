@@ -26,10 +26,12 @@ a:hover {
 }
 
 body {
-  margin: 0;
   padding: 0;
   display: flex;
   place-items: center;
+  max-width: 1440px;
+  padding-top: 40px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -42,7 +44,7 @@ h1 {
 
 @media only screen and (min-width: 481px) {
   body {
-    margin: 0 6.25rem 0 6.25rem;
+    padding-top: 20px;
   }
   h1 {
     font-size: 3rem;

@@ -1,7 +1,7 @@
 .background {
   position: relative;
   width: 100%;
-  padding-bottom: 1.375rem;
+  padding-bottom: 3.34rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,9 +44,7 @@
 
 @media only screen and (min-width: 780px) {
   .background {
-    height: 13.9375rem;
     border-radius: 1.5625rem;
-    padding-bottom: 2.6875rem;
   }
   .background::before {
     border-radius: 1.5625rem;
@@ -61,6 +59,7 @@
     line-height: 142.6%;
     width: auto;
     padding: 0 2.5rem;
-    white-space: nowrap;
+    white-space: wrap;
+    top: 40%;
   }
 }/*# sourceMappingURL=Background.css.map */

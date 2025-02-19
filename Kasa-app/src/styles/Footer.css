@@ -42,7 +42,6 @@
   .footer {
     display: flex;
     height: 13.0625rem;
-    padding: 4.125rem 29rem 1.8125rem 28.9375rem;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;

@@ -31,9 +31,10 @@
 
 @media only screen and (min-width: 481px) {
   .header {
-    height: 4.25rem;
-    padding-top: 2.8125rem;
-    padding-bottom: 3.125rem;
+    align-items: center;
+    display: inline-flex;
+    width: 90%;
+    margin: 25px 10px 20px;
   }
   .logo {
     width: 13.145rem;
