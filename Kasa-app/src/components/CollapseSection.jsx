@@ -1,8 +1,15 @@
-//Kasa-app\src\components\CollapseSection.jsx
+// Kasa-app\src\components\CollapseSection.jsx
 import { ArrowIconCollapse } from './ArrowIconCollapse.jsx';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
-function CollapsibleSection({ title, content, isOpen, onToggle }) {
+function CollapsibleSection({ title, content }) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const onToggle = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <div className="collapsible-section">
             <button
@@ -22,10 +29,6 @@ function CollapsibleSection({ title, content, isOpen, onToggle }) {
 CollapsibleSection.propTypes = {
     title: PropTypes.string.isRequired,
     content: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-    isOpen: PropTypes.bool.isRequired,
-    onToggle: PropTypes.func.isRequired,
 };
 
 export default CollapsibleSection;
-
-
